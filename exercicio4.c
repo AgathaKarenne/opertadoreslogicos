@@ -1,45 +1,41 @@
-#include<stdio.h>
-#include<math.h>
+#include <stdio.h>
 
-main(){
+    main(){
 
 
-   /*Dados três valores A, B e C, construa um algoritmo,
-    que imprima os valores de forma descendente (do maior para o menor).*/
+       //Dados três valores A, B e C, construa um algoritmo, que imprima os valores de forma descendente (do maior para o menor)//
 
-   int A = 10, B = 11, C = 12;
 
-   if(A > B && A > C){
-      printf("%d", A);
-      
-      if(B > C){
-        printf("%d %d ", B, C);
 
-      }else if(C > B){
-        printf("%d %d ", C, B);
+    float valorA, valorB, valorC;
 
-      }
-   
-   }else if(B > A && B < C){
-        printf("%d", B);
-        if(A > C){
-            printf("%d %d" , B, C);
-        }else if(C > A){
-            printf("%d %d", C, A);
+    printf("Digite aqui o valorA");
+    scanf("%f", &valorA);
+    printf("Digite aqui o valorB");
+    scanf("%f", &valorB);
+    printf("Digite aqui o valorC");
+    scanf("%f", &valorC);
 
+    if ( valorA > valorB > valorC ){
+        printf("%f",&valorA, &valorB, &valorC);
         }
-
-   }else if(C > A && C > B){
-        printf("%d", B);
-
-        if(A > B){
-            printf("%d %d" , A, B);
-        }else if(B > A){
-            printf("%d %d", B, A);
-
+    else if (valorA > valorC >  valorB ) {
+        printf("%f", &valorA, &valorC, &valorB);
         }
-
-   }
-
-}
-
+    else if ( valorB > valorA > valorC ) {
+        printf("%f", &valorB, &valorA, &valorC);
+        }
+    else if ( valorB > valorC > valorA ){
+        printf("%f", &valorB, &valorC, &valorA);
+        }
+    else if ( valorC > valorA > valorB ) {
+        printf("%d", &valorC, &valorA, &valorB);
+        }
+    else if ( valorC > valorB > valorA ) {
+        printf("%f", &valorC, &valorB, &valorA);
+        }
+    else {
+        printf("Esta e a ordem");
+        }
+       
+}  
