@@ -1,39 +1,45 @@
 #include<stdio.h>
+#include<math.h>
 
 main(){
 
-    //Dados três valores A, B e C, construa um algoritmo, que imprima os valores de forma descendente (do maior para o menor)//
 
-    int valorA, valorB, valorC;
+   /*Dados três valores A, B e C, construa um algoritmo,
+    que imprima os valores de forma descendente (do maior para o menor).*/
 
-    printf("Digite aqui o valorA");
-    scanf("%d", &valorA);
-    printf("Digite aqui o valorB");
-    scanf("%d", &valorB);
-    printf("Digite aqui o valorC");
-    scanf("%d", &valorC);
+   int A = 10, B = 11, C = 12;
 
-    if ( valorA > valorB > valorC ){
-         printf("%d",&valorA, &valorB, &valorC);
-         }
-      else if (valorA> valorC>  valorB ) {
-              printf("%d", &valorA, &valorC, &valorB);
-              }
-              else if ( valorB> valorA> valorC ) {
-                   printf("%d", &valorB, &valorA, &valorC);
-                   }
-                   else if ( valorB> valorC> valorA ){
-                        printf("%d", &valorB, &valorC, &valorA);
-                        }
-                        else if ( valorC> valorA> valorB ) {
-                             printf("%d", &valorC, &valorA, &valorB);
-                             }
-                             else if ( valorC> valorB> valorA ) {
-                                  printf("%d", &valorC, &valorB, &valorA);
-                                  }
-                                  else {
-                                       printf("Esta e a ordem");
-                                       }
-       
+   if(A > B && A > C){
+      printf("%d", A);
+      
+      if(B > C){
+        printf("%d %d ", B, C);
+
+      }else if(C > B){
+        printf("%d %d ", C, B);
+
+      }
+   
+   }else if(B > A && B < C){
+        printf("%d", B);
+        if(A > C){
+            printf("%d %d" , B, C);
+        }else if(C > A){
+            printf("%d %d", C, A);
+
+        }
+
+   }else if(C > A && C > B){
+        printf("%d", B);
+
+        if(A > B){
+            printf("%d %d" , A, B);
+        }else if(B > A){
+            printf("%d %d", B, A);
+
+        }
+
+   }
+
 }
 

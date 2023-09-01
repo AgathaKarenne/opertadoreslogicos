@@ -1,30 +1,65 @@
-#include <stdio.h>
+#include<stdio.h>
 
- main(){
+main(){
 
-    //Construa um algoritmo que, dado quatro valores, A, B, C e D, o algoritmo imprima o maior e o menor valor. //
+  /*Construa um algoritmo que, dado quatro valores, A, B, C e D, o algoritmo imprima o maior e o menor valor. */
+  
+  int A = 10, B = 1, C = 9, D= 8, maior, menor;
 
-    float valorA, valorB, valorC, valorD, valorMaior, valorMenor;
+  //*como descobrir o maior e o menor de todos ao mesmo tempo
 
-    printf("Digite um valor:");
-    scanf("%f", &valorA, &valorB, &valorC, &valorD, &valorMaior, &valorMenor);
+  if(A > B && A > C && A > D){
+        printf("A é maior de todos");
+        //verificar que é menor
 
-    if(valorA < valorB){
-       printf("Maior numero");
-        
-    }else if(valorB < valorC){
-        printf("Menor valor");
-
-    }else if(valorC < valorD){
-        printf("Maior valor");
-
-    }else{
-
-        printf("Traga o valorMaior || valorMenor");
-    }
-
+        if(B < A && B < C && B < D){
+            printf("B é menor");
     
+        }else if(C < B && C < D){
+            printf("C é menor");
+
+        }else{
+            printf("D é menor");
+        }
+  }
+
+  //verficando o maior de todos
+
+  /*if(A > B && A > C && A > D){
+        maior = A;
+
+  }else if(B > A && B > C && B > D){
+
+        maior = B;
+
+  }else if(C > A && C > B && C > D){
+
+        maior = C;
+
+  }else{
+        maior = D;
+  }
+
+  //verificando o menor de todos
+
+  if(A < B && A < C && A < D){
+        menor = A;
+
+  }else if(B < A && B < C && B < D){
+
+        menor = B;
+
+  }else if(C < A && C < B && C < D){
+
+        menor = C;
+
+  }else{
+        menor = D;
+  }
+
+
+  printf("Maior: %d,. Menor: %d", maior, menor);
+
+  */
+
 }
-
-
-
