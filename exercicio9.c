@@ -41,7 +41,7 @@
 		    salarioReajustado = salarioAtual;
     
 	}else{
-		    printf("\nDados Invalidos!!!");
+		    printf("Não receberá promoção!!!");
   }
    
 }
