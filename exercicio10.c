@@ -3,30 +3,34 @@
 
 main(){
 
-  int numeroA, numeroB, numeroC, delta, sqrtdelta;
-
-  delta = B² - 4ac;
-  delta: sqrtdelta = sqrt(delta);
-
+  double numeroA, numeroB, numeroC, delta, sqrtdelta, x1, x2;
 
   printf("Qual é o valor dos numeros:");
-  scanf("%d", &numeroA, &numeroB, &numeroC);
+  scanf("%lf %lf %lf", &numeroA, &numeroB, &numeroC);
 
-  if(numeroA = 0 ){
+  delta = numeroB * numeroB - 4 * numeroA  * numeroC;
+  sqrtdelta = sqrt(delta);
+
+  printf("%lf", sqrtdelta);
+
+  if(numeroA == 0 ){
     printf("o programa terminou");
+    
 
-  }else if(numeroA != 0){
-    printf("a equação é valida");
-
-  }else if(delta >= 0){
-    printf("raiz1 = (-b + sqrtdelta) / 2a");
-    printf("raiz2 = (-b - sqrtdelta) / 2a");
-  
   }else if(delta < 0){
-    printf("raiz1 = (-b + i.sqrt(-delta) )/2a");
-    printf("raiz2 = (-b - i.sqrt(-delta) )/2a");
+    printf("não é existe raiz");
+
+  }else{
+
+    if(delta == 0){
+        x1 = (-numeroB + sqrtdelta)/ (2*numeroA);
+        printf("raiz unica %lf", x1);
+    }else{
+         x1 = (-numeroB + sqrtdelta)/ (2*numeroA);
+         x2 = (-numeroB - sqrtdelta)/ (2*numeroA);
+         printf("x1 %lf", x1);
+         printf("x2 %lf", x2);
+    }
   }
-
-
   
 }
